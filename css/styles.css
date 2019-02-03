@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+::selection {
+  background-color: black;
+  color: white;
+}
+
 h1, h2, h3 {
   margin: 0;
 }
@@ -233,6 +238,66 @@ header h1 {
 }
 .bloque-gris .knotsRow .trinity:after {
   content: "Trinity";
+}
+
+.bloque-blanco.simply {
+  padding-bottom: 180px;
+}
+.bloque-blanco.simply p {
+  color: #8b8b8b;
+  text-align: center;
+}
+.bloque-blanco.simply .instructionsKnots {
+  width: 95%;
+  margin: auto;
+}
+
+.bloque-gris.wiseness .wiseDesc {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+.bloque-gris.wiseness .usageExamples {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bloque-gris.wiseness .usageExamples ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.bloque-gris.wiseness .usageExamples ul li {
+  color: white;
+  font-size: 36px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+.bloque-gris.wiseness .usageExamples ul li.active:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/FramewhiteTie.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: -50px;
+}
+.bloque-gris.wiseness .usageExamples .imgExample {
+  height: 100%;
+}
+.bloque-gris.wiseness .usageExamples .imgExample img {
+  height: 100%;
+  width: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
