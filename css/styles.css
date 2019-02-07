@@ -294,10 +294,57 @@ header h1 {
 }
 .bloque-gris.wiseness .usageExamples .imgExample {
   height: 100%;
+  position: relative;
+  z-index: 100;
+}
+.bloque-gris.wiseness .usageExamples .imgExample:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  width: 100px;
+  height: 150px;
+  background-color: #c4c4c4;
+  z-index: -1;
 }
 .bloque-gris.wiseness .usageExamples .imgExample img {
   height: 100%;
   width: auto;
+}
+
+.bloque-blanco.usability {
+  padding-bottom: 540px;
+}
+.bloque-blanco.usability .usabilityDesc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.bloque-blanco.usability .usabilityDesc .turnedPhone {
+  width: 200px;
+}
+.bloque-blanco.usability .usabilityDesc p {
+  text-align: right;
+  color: #8b8b8b;
+}
+.bloque-blanco.usability .usabilityDesc .frontPhone {
+  position: absolute;
+  width: 230px;
+  bottom: -300px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.bloque-blanco.usability .usabilityDesc .frontPhone:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  width: 150px;
+  height: 300px;
+  background-color: #c4c4c4;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=styles.css.map */
