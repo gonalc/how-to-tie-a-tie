@@ -13,6 +13,10 @@ body {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1, h2, h3 {
   margin: 0;
 }
@@ -44,6 +48,52 @@ img {
   left: 20px;
   width: 80px;
   cursor: pointer;
+  z-index: 5000;
+}
+
+.menu {
+  width: 100vw; height: 100vh;
+  background-color: $gris;
+  position: fixed;
+  top: 0; left: -100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: left .3s ease-in-out;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      text-align: center;
+      display: block;
+      color: white;
+      font-family: $titulos;
+      font-size: 30px;
+      line-height: 250%;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        &:after {
+          width: 50px;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 15px; left: 0; right: 0;
+        width: 0; height: 1px;
+        background-color: white;
+        margin: auto;
+        transition: width .3s ease-in-out;
+      }
+    }
+  }
 }
 
 header {
@@ -309,6 +359,21 @@ header {
             left: -50px;
           }
         }
+        &:hover {
+          &:before {
+            width: 50px;
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -10px; left: 40px;
+          margin: auto;
+          width: 0;
+          height: 1px;
+          background-color: white;
+          transition: width .3s ease-in-out;
+        }
       }
     }
     .imgExample {
@@ -359,6 +424,59 @@ header {
         width: 150px; height: 300px;
         background-color: #c4c4c4;
         z-index: -1;
+      }
+    }
+  }
+}
+
+.bloque-gris.style {
+  .styleContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    .stylePic {
+      width: 30%;
+      position: relative;
+      z-index: 100;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -30px; right: -30px;
+        background-color: #c4c4c4;
+        width: 50%; height: 60%;
+        z-index: -1;
+      }
+    }
+    .styleText {
+      width: 50%;
+    }
+  }
+}
+
+.video-section {
+  video {
+    width: 100%; height: auto;
+    filter: grayscale(100%);
+    source {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100vh;
+        background-color: red;
+        z-index: 100;
+      }
+      &:before {
+        content: '¡Descárgatela!';
+        position: absolute;
+        top: 25%; left: 0; right: 0;
+        margin: auto;
+        color: white;
+        font-size: 64px;
+        font-family: $cuerpo;
+        text-align: center;
+        z-index: 200;
       }
     }
   }
