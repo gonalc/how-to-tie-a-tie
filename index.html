@@ -14,10 +14,24 @@
 </head>
 <body>
 
+  <nav class='menu'>
+    <ul>
+      <li><a href='#how_do_you_feel'>¿Cómo te sientes hoy?</a></li>
+      <li><a href='#accessibility'>Accesibilidad</a></li>
+      <li><a href='#simply'>Sencillez</a></li>
+      <li><a href='#wiseness'>Sabiduría</a></li>
+      <li><a href='#usability'>Usabilidad</a></li>
+      <li><a href='#style'>Estilo</a></li>
+      <li><a href='#download'>Descargar</a></li>
+    </ul>
+  </nav>
+
   <header>
     <div class="menu-button">
       <img src="img/barritasmenu.png" alt="">
     </div>
+
+    <!-- <div id="mount" class="menu-button"></div> -->
 
     <div class="titulo">
       <h1>How to<br>tie a tie</h1>
@@ -35,17 +49,17 @@
 
     <div class="downloadButtons">
       <div class="downlaodBtn apple">
-        <img src="img/download_appstore.png" alt="">
+        <a href='https://itunes.apple.com/us/app/how-to-tie-a-tie-fast-and-easy/id378478530?mt=8' target='_blank'><img src="img/download_appstore.png" alt=""></a>
       </div>
       <div class="downlaodBtn google">
-        <img src="img/download_googleplay.png" alt="">
+        <a href='https://play.google.com/store/apps/details?id=com.artelplus.howtotie&hl=en_US' target='_blank'><img src="img/download_googleplay.png" alt=""></a>
       </div>
     </div>
   </section>
 
 <div class="separateContent"></div>
 
-  <section class="bloque-blanco how-you-feeling">
+  <section class="bloque-blanco how-you-feeling" id='how_do_you_feel'>
     <div class="headSection whiteSection">
       <h2>¿Cómo te sientes hoy?</h2>
       <div class="greyLine titleLine"></div>
@@ -75,7 +89,7 @@
 
   </section>
 
-  <section class="bloque-gris accessibility">
+  <section class="bloque-gris accessibility" id='accessibility'>
     <div class="headSection greySection">
       <h2>Accesibilidad</h2>
       <div class="whiteLine titleLine"></div>
@@ -98,7 +112,7 @@
     </div>
   </section>
 
-  <section class='bloque-blanco simply'>
+  <section class='bloque-blanco simply' id='simply'>
     <div class="headSection">
       <h2>Sencillez</h2>
       <div class="greyLine titleLine"></div>
@@ -110,7 +124,7 @@
     <div class="instructionsKnots"><img src="img/instrucciones_grande_nopubli.jpg" alt=""></div>
   </section>
 
-  <section class="bloque-gris wiseness">
+  <section class="bloque-gris wiseness" id='wiseness'>
     <div class="headSection">
       <h2>Sabiduría</h2>
       <div class="titleLine whiteLine"></div>
@@ -124,10 +138,10 @@
 
       <div class="usageExamples">
         <ul>
-          <li>De boda</li>
-          <li>Paseo en coche</li>
-          <li>Un día en la nieve</li>
-          <li class='active'>Mañana en el parque</li>
+          <li class='weddingLink'>De boda</li>
+          <li class='carWalkLink'>Paseo en coche</li>
+          <li class='snowLink'>Un día en la nieve</li>
+          <li class='active kidLink'>Mañana en el parque</li>
         </ul>
 
         <div class="imgExample">
@@ -136,6 +150,58 @@
       </div>
 
   </section>
+
+  <section class="bloque-blanco usability" id='usability'>
+    <div class="headSection">
+      <h2>Usabilidad</h2>
+      <div class="titleLine greyLine"></div>
+    </div>
+
+    <div class="usabilityDesc">
+      <div class="turnedPhone">
+        <img src="img/phone_turner_optim.png" alt="">
+      </div>
+
+      <div class="frontPhone">
+        <img src="img/phone_bolsillos.png" alt="">
+      </div>
+
+      <p>Nuestra amigable interfaz<br>
+        te permitirá encontrar<br>
+        rápidamente lo que<br>
+        necesites</p>
+    </div>
+
+  </section>
+
+  <section class="style bloque-gris" id='style'>
+    <div class="headSection">
+      <h2>Estilo</h2>
+      <div class="titleLine whiteLine"></div>
+    </div>
+
+    <div class="styleContent">
+      <div class='stylePic'>
+        <img src="img/chica_corbata.jpeg" alt="">
+      </div>
+
+      <div class="styleText">
+        <p>Descubre nuevos nudos cada semana</p>
+        <p>Pajaritas, bufandas, pañuelos de bolsillo y corbatas</p>
+        <p>Marca la diferencia</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section" id='download'>
+    <video autoplay muted loop>
+      <source src='vid/tying_tie.ogg' type='video/ogg-ogv'>
+      <source src='vid/tying_tie_gordo.mp4' type='video/mp4'>
+    </video>
+  </section>
+
+  <!-- ACUERDATE DE PONER BIEN EL SASS -->
+  <!-- LO TIENES EN LA PARTE DE ARRIBA DEL ARCHIVO .SCSS -->
 
 <script src='js/scripts.js'></script>
 </body>
