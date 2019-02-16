@@ -25,6 +25,9 @@ h2 {
   font-size: 64px;
   font-family: $titulos;
   padding-left: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
 }
 
 p {
@@ -35,6 +38,9 @@ p {
 .titleLine {
   height: 5px;
   width: 45%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 img {
@@ -45,10 +51,69 @@ img {
 .menu-button {
   position: fixed;
   top: 20px;
-  left: 20px;
-  width: 80px;
+  right: 0;
+  width: 80px; height: 40px;
+  padding: 10px 20px;
+  margin-left: -50px;
   cursor: pointer;
   z-index: 5000;
+  background-color: $gris;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  box-shadow: -3px 6px 10px 0px rgba(0, 0, 0, .5);
+  box-shadow: -3px 6px 20px 0px rgba(0, 0, 0, .3);
+  box-shadow: -3px 6px 30px 0px rgba(0, 0, 0, .1);
+  transition: right .3s ease-in-out;
+  .top-line {
+    width: 100%; height: 2px;
+    background-color: white;
+    animation: topLine 1.9s ease-in-out infinite;
+  }
+  .bottom-line {
+    width: 60%; height: 2px;
+    background-color: white;
+    animation: bottomLine 1.8s ease-in-out infinite;
+  }
+}
+
+.menu-corbata {
+  position: fixed;
+  top: -200px; right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  z-index: 5000;
+  cursor: pointer;
+  transition: top .3s ease-in-out;
+}
+
+@keyframes topLine {
+  50% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bottomLine {
+  40% {
+    width: 30%;
+  }
+  80% {
+    width: 60%;
+  }
+  100% {
+    width: 60%;
+  }
 }
 
 .menu {
@@ -61,6 +126,9 @@ img {
   align-items: center;
   z-index: 2000;
   transition: left .3s ease-in-out;
+  @media screen and (max-width: 768px) {
+    // padding-top: 100px;
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -72,6 +140,9 @@ img {
       font-family: $titulos;
       font-size: 30px;
       line-height: 250%;
+      @media screen and (max-width: 768px) {
+        line-height: 180%;
+      }
       a {
         color: white;
         text-decoration: none;
@@ -104,12 +175,24 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding-top: 100px;
+    justify-content: center;
+  }
   h1 {
     color: white;
     font-family: 'Limelight', sans-serif;
     text-align: right;
     font-size: 96px;
     padding-right: 30px;
+    @media screen and (max-width: 768px) {
+      font-size: 60px;
+      text-align: center;
+      color: $gris;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, .7);
+    }
   }
 }
 
@@ -160,6 +243,9 @@ header {
     align-items: baseline;
     justify-content: space-between;
     padding-bottom: 46px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
     h2 {
       color: $gris;
     }
@@ -174,6 +260,9 @@ header {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      padding: 0 10px;
+    }
     .roundImg {
       width: 300px;
       height: 300px;
@@ -187,6 +276,9 @@ header {
     .roundText {
       p {
         color: $gris;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -226,6 +318,9 @@ header {
     align-items: baseline;
     justify-content: space-between;
     padding-bottom: 60px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
     h2 {
       color: white;
     }
@@ -239,13 +334,20 @@ header {
   }
   .knotsRow {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 80px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
     .thumbKnot {
       width: 300px;
       height: 300px;
       border-radius: 50%;
       position: relative;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
       &:hover {
         &:after {
           opacity: 1;
@@ -320,10 +422,19 @@ header {
 }
 
 .bloque-gris.wiseness {
+  .headSection {
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
+  }
   .wiseDesc {
     width: 50%;
     margin: auto;
     padding-bottom: 40px;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+      width: 95%;
+    }
   }
   .usageExamples {
     height: 50vh;
@@ -331,6 +442,39 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      height: auto;
+    }
+    #usage-examples {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        height: 50px;
+        width: 100%;
+        border-radius: 0;
+        background-color: $gris;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        color: white;
+        background-image: url(../img/FramewhiteTie.png);
+        background-size: contain;
+        background-position: 95% 50%;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        font-family: $cuerpo;
+        font-size: 20px;
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+    }
     ul {
       margin: 0;
       padding: 0;
@@ -339,6 +483,9 @@ header {
       flex-direction: column;
       justify-content: space-around;
       height: 100%;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       li {
         color: white;
         font-size: 36px;
@@ -380,6 +527,10 @@ header {
       height: 100%;
       position: relative;
       z-index: 100;
+      @media screen and (max-width: 768px) {
+        height: auto;
+        width: 100%;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -387,10 +538,17 @@ header {
         width: 100px; height: 150px;
         background-color: #c4c4c4;
         z-index: -1;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
       img {
         height: 100%;
         width: auto;
+        @media screen and (max-width: 768px) {
+          height: auto;
+          width: 100%;
+        }
       }
     }
   }
@@ -399,17 +557,33 @@ header {
 
 .bloque-blanco.usability {
   padding-bottom: 540px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 150px;
+  }
   .usabilityDesc {
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     .turnedPhone {
       width: 200px;
+      @media screen and (max-width: 768px) {
+        order: 2;
+        width: 45%;
+        align-self: flex-start;
+        margin-left: 10px;
+      }
     }
     p {
       text-align: right;
       color: $gris;
+      @media screen and (max-width: 768px) {
+        order: 1;
+        text-align: center;
+      }
     }
     .frontPhone {
       position: absolute;
@@ -417,6 +591,13 @@ header {
       bottom: -300px;
       right: 0; left: 0;
       margin: auto;
+      @media screen and (max-width: 768px) {
+        width: 45%;
+        right: 5px;
+        margin: 0;
+        left: auto;
+        bottom: 0;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -424,20 +605,34 @@ header {
         width: 150px; height: 300px;
         background-color: #c4c4c4;
         z-index: -1;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
   }
 }
 
 .bloque-gris.style {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
   .styleContent {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 0;
+    }
     .stylePic {
       width: 30%;
       position: relative;
       z-index: 100;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        order: 2;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -445,20 +640,75 @@ header {
         background-color: #c4c4c4;
         width: 50%; height: 60%;
         z-index: -1;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
     .styleText {
       width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 95%;
+        margin: auto;
+        order: 1;
+      }
     }
   }
 }
 
 .video-section {
+  position: relative;
+  @media screen and (max-width: 768px) {
+    overflow: hidden;
+    margin-top: -5px;
+  }
+  .downloadEndSection {
+    position: absolute;
+    top: 25%; left: 0; right: 0;
+    margin: auto;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .logoAppEnd {
+      width: 100px;
+      padding: 40px 0;
+    }
+    .downloadLinksEnd {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .downBtn {
+        width: 300px;
+        cursor: pointer;
+        @media screen and (max-width: 768px) {
+          width: 95%;
+          margin: auto;
+        }
+      }
+    }
+    h2 {
+      color: white;
+      font-size: 64px;
+      font-family: $cuerpo;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+    }
+  }
   video {
     width: 100%; height: auto;
     filter: grayscale(100%);
+    margin-bottom: -4px;
+    @media screen and (max-width: 768px) {
+      width: auto;
+      height: 80%;
+      margin-left: -500px;
+      object-fit: cover;
+    }
     source {
-      position: relative;
       &:after {
         content: '';
         position: absolute;

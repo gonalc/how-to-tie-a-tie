@@ -22,6 +22,11 @@ h2 {
   font-family: "Mukta", sans-serif;
   padding-left: 20px;
 }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 48px;
+  }
+}
 
 p {
   font-family: "Lato", sans-serif;
@@ -32,6 +37,11 @@ p {
   height: 5px;
   width: 45%;
 }
+@media screen and (max-width: 768px) {
+  .titleLine {
+    display: none;
+  }
+}
 
 img {
   width: 100%;
@@ -41,12 +51,73 @@ img {
 .menu-button {
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 0;
   width: 80px;
+  height: 40px;
+  padding: 10px 20px;
+  margin-left: -50px;
   cursor: pointer;
   z-index: 5000;
+  background-color: #8b8b8b;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  box-shadow: -3px 6px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -3px 6px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: -3px 6px 30px 0px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+}
+.menu-button .top-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  animation: topLine 1.9s ease-in-out infinite;
+}
+.menu-button .bottom-line {
+  width: 60%;
+  height: 2px;
+  background-color: white;
+  animation: bottomLine 1.8s ease-in-out infinite;
 }
 
+.menu-corbata {
+  position: fixed;
+  top: -200px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  z-index: 5000;
+  cursor: pointer;
+  transition: top 0.3s ease-in-out;
+}
+
+@keyframes topLine {
+  50% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes bottomLine {
+  40% {
+    width: 30%;
+  }
+  80% {
+    width: 60%;
+  }
+  100% {
+    width: 60%;
+  }
+}
 .menu {
   width: 100vw;
   height: 100vh;
@@ -74,6 +145,11 @@ img {
   line-height: 250%;
   cursor: pointer;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .menu ul li {
+    line-height: 180%;
+  }
 }
 .menu ul li a {
   color: white;
@@ -104,12 +180,28 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  header {
+    align-items: flex-start;
+    padding-top: 100px;
+    justify-content: center;
+  }
+}
 header h1 {
   color: white;
   font-family: "Limelight", sans-serif;
   text-align: right;
   font-size: 96px;
   padding-right: 30px;
+}
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #8b8b8b;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .home-gris {
@@ -163,6 +255,11 @@ header h1 {
   justify-content: space-between;
   padding-bottom: 46px;
 }
+@media screen and (max-width: 768px) {
+  .bloque-blanco .headSection {
+    padding-bottom: 20px;
+  }
+}
 .bloque-blanco .headSection h2 {
   color: #8b8b8b;
 }
@@ -177,6 +274,11 @@ header h1 {
   align-items: center;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 768px) {
+  .bloque-blanco .rowImgText {
+    padding: 0 10px;
+  }
+}
 .bloque-blanco .rowImgText .roundImg {
   width: 300px;
   height: 300px;
@@ -189,6 +291,11 @@ header h1 {
 }
 .bloque-blanco .rowImgText .roundText p {
   color: #8b8b8b;
+}
+@media screen and (max-width: 768px) {
+  .bloque-blanco .rowImgText .roundText p {
+    text-align: center;
+  }
 }
 .bloque-blanco .rowImgText.segunda {
   padding-bottom: 180px;
@@ -229,6 +336,11 @@ header h1 {
   justify-content: space-between;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris .headSection {
+    padding-bottom: 20px;
+  }
+}
 .bloque-gris .headSection h2 {
   color: white;
 }
@@ -241,14 +353,25 @@ header h1 {
 }
 .bloque-gris .knotsRow {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris .knotsRow {
+    padding-bottom: 20px;
+  }
 }
 .bloque-gris .knotsRow .thumbKnot {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris .knotsRow .thumbKnot {
+    margin-bottom: 20px;
+  }
 }
 .bloque-gris .knotsRow .thumbKnot:hover:after {
   opacity: 1;
@@ -306,10 +429,21 @@ header h1 {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .headSection {
+    padding-bottom: 20px;
+  }
+}
 .bloque-gris.wiseness .wiseDesc {
   width: 50%;
   margin: auto;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .wiseDesc {
+    padding-bottom: 20px;
+    width: 95%;
+  }
 }
 .bloque-gris.wiseness .usageExamples {
   height: 50vh;
@@ -317,6 +451,42 @@ header h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.bloque-gris.wiseness .usageExamples #usage-examples {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples #usage-examples {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    background-color: #8b8b8b;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    color: white;
+    background-image: url(../img/FramewhiteTie.png);
+    background-size: contain;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+  }
+  .bloque-gris.wiseness .usageExamples #usage-examples:active, .bloque-gris.wiseness .usageExamples #usage-examples:focus {
+    outline: none;
+  }
 }
 .bloque-gris.wiseness .usageExamples ul {
   margin: 0;
@@ -326,6 +496,11 @@ header h1 {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples ul {
+    display: none;
+  }
 }
 .bloque-gris.wiseness .usageExamples ul li {
   color: white;
@@ -365,6 +540,12 @@ header h1 {
   position: relative;
   z-index: 100;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples .imgExample {
+    height: auto;
+    width: 100%;
+  }
+}
 .bloque-gris.wiseness .usageExamples .imgExample:after {
   content: "";
   position: absolute;
@@ -375,13 +556,29 @@ header h1 {
   background-color: #c4c4c4;
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples .imgExample:after {
+    display: none;
+  }
+}
 .bloque-gris.wiseness .usageExamples .imgExample img {
   height: 100%;
   width: auto;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.wiseness .usageExamples .imgExample img {
+    height: auto;
+    width: 100%;
+  }
+}
 
 .bloque-blanco.usability {
   padding-bottom: 540px;
+}
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability {
+    padding-bottom: 150px;
+  }
 }
 .bloque-blanco.usability .usabilityDesc {
   display: flex;
@@ -389,12 +586,31 @@ header h1 {
   align-items: center;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability .usabilityDesc {
+    flex-direction: column;
+  }
+}
 .bloque-blanco.usability .usabilityDesc .turnedPhone {
   width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability .usabilityDesc .turnedPhone {
+    order: 2;
+    width: 45%;
+    align-self: flex-start;
+    margin-left: 10px;
+  }
 }
 .bloque-blanco.usability .usabilityDesc p {
   text-align: right;
   color: #8b8b8b;
+}
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability .usabilityDesc p {
+    order: 1;
+    text-align: center;
+  }
 }
 .bloque-blanco.usability .usabilityDesc .frontPhone {
   position: absolute;
@@ -403,6 +619,15 @@ header h1 {
   right: 0;
   left: 0;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability .usabilityDesc .frontPhone {
+    width: 45%;
+    right: 5px;
+    margin: 0;
+    left: auto;
+    bottom: 0;
+  }
 }
 .bloque-blanco.usability .usabilityDesc .frontPhone:after {
   content: "";
@@ -414,16 +639,38 @@ header h1 {
   background-color: #c4c4c4;
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .bloque-blanco.usability .usabilityDesc .frontPhone:after {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .bloque-gris.style {
+    padding-bottom: 0;
+  }
+}
 .bloque-gris.style .styleContent {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.style .styleContent {
+    flex-direction: column;
+    padding: 0;
+  }
+}
 .bloque-gris.style .styleContent .stylePic {
   width: 30%;
   position: relative;
   z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .bloque-gris.style .styleContent .stylePic {
+    width: 100%;
+    order: 2;
+  }
 }
 .bloque-gris.style .styleContent .stylePic:after {
   content: "";
@@ -435,17 +682,86 @@ header h1 {
   height: 60%;
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.style .styleContent .stylePic:after {
+    display: none;
+  }
+}
 .bloque-gris.style .styleContent .styleText {
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  .bloque-gris.style .styleContent .styleText {
+    width: 95%;
+    margin: auto;
+    order: 1;
+  }
+}
 
+.video-section {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .video-section {
+    overflow: hidden;
+    margin-top: -5px;
+  }
+}
+.video-section .downloadEndSection {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.video-section .downloadEndSection .logoAppEnd {
+  width: 100px;
+  padding: 40px 0;
+}
+.video-section .downloadEndSection .downloadLinksEnd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video-section .downloadEndSection .downloadLinksEnd .downBtn {
+  width: 300px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .video-section .downloadEndSection .downloadLinksEnd .downBtn {
+    width: 95%;
+    margin: auto;
+  }
+}
+.video-section .downloadEndSection h2 {
+  color: white;
+  font-size: 64px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .video-section .downloadEndSection h2 {
+    font-size: 30px;
+  }
+}
 .video-section video {
   width: 100%;
   height: auto;
   filter: grayscale(100%);
+  margin-bottom: -4px;
 }
-.video-section video source {
-  position: relative;
+@media screen and (max-width: 768px) {
+  .video-section video {
+    width: auto;
+    height: 80%;
+    margin-left: -500px;
+    object-fit: cover;
+  }
 }
 .video-section video source:after {
   content: "";

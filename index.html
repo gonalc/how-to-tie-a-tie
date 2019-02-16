@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,10 @@
   <title>How to Tie a Tie</title>
   <link href="https://fonts.googleapis.com/css?family=Lato|Limelight|Mukta" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <nav class='menu'>
@@ -28,15 +28,18 @@
 
   <header>
     <div class="menu-button">
-      <img src="img/barritasmenu.png" alt="">
+      <div class="top-line"></div>
+      <div class="bottom-line"></div>
     </div>
 
-    <!-- <div id="mount" class="menu-button"></div> -->
+    <div class="menu-corbata">
+      <img src="img/FramewhiteTie.png" alt="">
+    </div>
+
 
     <div class="titulo">
       <h1>How to<br>tie a tie</h1>
     </div>
-    <!-- <img src="img/01corbata.jpeg" alt=""> -->
   </header>
 
   <section class="home-gris">
@@ -49,15 +52,17 @@
 
     <div class="downloadButtons">
       <div class="downlaodBtn apple">
-        <a href='https://itunes.apple.com/us/app/how-to-tie-a-tie-fast-and-easy/id378478530?mt=8' target='_blank'><img src="img/download_appstore.png" alt=""></a>
+        <a href='https://itunes.apple.com/us/app/how-to-tie-a-tie-fast-and-easy/id378478530?mt=8' target='_blank'><img
+            src="img/download_appstore.png" alt=""></a>
       </div>
       <div class="downlaodBtn google">
-        <a href='https://play.google.com/store/apps/details?id=com.artelplus.howtotie&hl=en_US' target='_blank'><img src="img/download_googleplay.png" alt=""></a>
+        <a href='https://play.google.com/store/apps/details?id=com.artelplus.howtotie&hl=en_US' target='_blank'><img
+            src="img/download_googleplay.png" alt=""></a>
       </div>
     </div>
   </section>
 
-<div class="separateContent"></div>
+  <div class="separateContent"></div>
 
   <section class="bloque-blanco how-you-feeling" id='how_do_you_feel'>
     <div class="headSection whiteSection">
@@ -121,7 +126,9 @@
     <p>Guía paso a paso de cada nudo</p>
     <p>Nunca fue tan fácil ser elegante</p>
 
-    <div class="instructionsKnots"><img src="img/instrucciones_grande_nopubli.jpg" alt=""></div>
+    <div class="instructionsKnots">
+      <img src="img/instrucciones_grande_nopubli.jpg" alt="">
+    </div>
   </section>
 
   <section class="bloque-gris wiseness" id='wiseness'>
@@ -132,22 +139,29 @@
 
     <div class="wiseDesc">
       <p>Porque la categoría no se puede
-      quedar en casa, tenemos lo que
-      necesitas para cada ocasión</p>
+        quedar en casa, tenemos lo que
+        necesitas para cada ocasión</p>
     </div>
 
-      <div class="usageExamples">
-        <ul>
-          <li class='weddingLink'>De boda</li>
-          <li class='carWalkLink'>Paseo en coche</li>
-          <li class='snowLink'>Un día en la nieve</li>
-          <li class='active kidLink'>Mañana en el parque</li>
-        </ul>
+    <div class="usageExamples">
+      <ul>
+        <li class='weddingLink'>De boda</li>
+        <li class='carWalkLink'>Paseo en coche</li>
+        <li class='snowLink'>Un día en la nieve</li>
+        <li class='active kidLink'>Mañana en el parque</li>
+      </ul>
 
-        <div class="imgExample">
-          <img src="img/chiquillo_pajarita.jpeg" alt="">
-        </div>
+      <select name="usage-examples" id="usage-examples">
+        <option value="kidLink" class="kidLink">Mañana en el parque</option>
+        <option value="weddingLink" class="weddingLink">De boda</option>
+        <option value="carWalkLink" class="carWalkLink">Paseo en coche</option>
+        <option value="snowLink" class="snowLink">Un día en la nieve</option>
+      </select>
+
+      <div class="imgExample">
+        <img src="img/chiquillo_pajarita.jpeg" alt="">
       </div>
+    </div>
 
   </section>
 
@@ -194,6 +208,17 @@
   </section>
 
   <section class="video-section" id='download'>
+    <div class="downloadEndSection">
+      <h2>¡Descárgatela!</h2>
+      <div class="logoAppEnd">
+        <img src="img/logo2.png" alt="">
+      </div>
+      <div class="downloadLinksEnd">
+        <div class="downBtn"><a href='https://itunes.apple.com/us/app/how-to-tie-a-tie-fast-and-easy/id378478530?mt=8' target='_blank'><img src="img/download_appstore.png" alt=""></a></div>
+        <div class="downBtn"><a href='https://play.google.com/store/apps/details?id=com.artelplus.howtotie&hl=en_US' target="_blank"><img src="img/download_googleplay.png" alt=""></a></div>
+      </div>
+    </div>
+    
     <video autoplay muted loop>
       <source src='vid/tying_tie.ogg' type='video/ogg-ogv'>
       <source src='vid/tying_tie_gordo.mp4' type='video/mp4'>
@@ -203,6 +228,7 @@
   <!-- ACUERDATE DE PONER BIEN EL SASS -->
   <!-- LO TIENES EN LA PARTE DE ARRIBA DEL ARCHIVO .SCSS -->
 
-<script src='js/scripts.js'></script>
+  <script src='js/scripts.js'></script>
 </body>
+
 </html>
