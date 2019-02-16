@@ -694,7 +694,7 @@ header h1 {
   .bloque-gris.style .styleContent .styleText {
     width: 95%;
     margin: auto;
-    order: 1;
+    order: 2;
   }
 }
 
@@ -749,6 +749,13 @@ header h1 {
     font-size: 30px;
   }
 }
+.video-section .mobileTieScreenshot {
+  filter: grayscale(100%);
+}
+.video-section .mobileTieScreenshot img {
+  width: 250%;
+  margin-left: -75%;
+}
 .video-section video {
   width: 100%;
   height: auto;
@@ -761,6 +768,12 @@ header h1 {
     height: 80%;
     margin-left: -500px;
     object-fit: cover;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-section video source {
+    display: none;
   }
 }
 .video-section video source:after {
